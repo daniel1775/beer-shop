@@ -16,6 +16,7 @@
     }
     &-description {
         color: rgb(151 145 145);
+        line-height: 20px;
     }
     &-price {
         font-weight: 800;
@@ -27,5 +28,6 @@
         font-weight: 700;
         border: none;
         padding: 8px 0;
+        cursor: pointer
     }
 }

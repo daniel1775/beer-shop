@@ -1,0 +1,28 @@
+.button-filter {
+    position: fixed;
+    bottom: 5%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: fit-content;
+    button {
+        background-color: #5330d7;
+        color: white;
+        font-size: calc(1rem - 2px);
+        padding: 10px 24px;
+        font-weight: 600;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        transition: all .4s ease;
+        &:hover {
+            transform: scale(1.1);
+        }
+        img {
+            height: 14px;
+        }
+    }
+}
