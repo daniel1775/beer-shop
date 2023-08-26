@@ -1,10 +1,31 @@
 .card {
     width: 100%;
-    &-title {
-        font-size: 1rem;
+    border: 1px solid rgb(198, 196, 196);
+    &-wrapper {
+        padding: 0 10%;
     }
     img {
         width: 100%;
         aspect-ratio: 1/1;
+    }
+    &-title {
+        font-size: calc(1rem - 2px);
+    }
+    &-description, &-price, button {
+        font-size: calc(1rem - 4px);
+    }
+    &-description {
+        color: rgb(151 145 145);
+    }
+    &-price {
+        font-weight: 800;
+    }
+    button {
+        width: 100%;
+        color: #5330d7;
+        background-color: #ededed;
+        font-weight: 700;
+        border: none;
+        padding: 8px 0;
     }
 }
