@@ -6,6 +6,8 @@ import ModalFilter from './components/ModalFilter/ModalFilter';
 import './app.scss';
 import { useState, useEffect } from 'react';
 import { typeFilterValues } from './lib/types/filter';
+import { typeBeer } from './lib/types/beer';
+import { objectFieldsActive } from './lib/helpers/objects';
 
 const App = () => {
 	const [isActiveFilter, setIsActiveFilter] = useState(false);
@@ -14,6 +16,7 @@ const App = () => {
 		morena: false,
 		roja: false,
 	});
+	const [beersToShow, setBeersToShow] = useState<typeBeer[]>(beerData);
 
 	const handleClickFilter = () => {
 		setIsActiveFilter((prev) => !prev);
@@ -27,11 +30,36 @@ const App = () => {
 		}
 	}, [isActiveFilter]);
 
+	useEffect(() => {
+		const dataToShow: typeBeer[] = [];
+		if (filterValues.morena) {
+			dataToShow.push(
+				...beerData.filter((singleBeer) => singleBeer.type === 'morena')
+			);
+		}
+		if (filterValues.roja) {
+			dataToShow.push(
+				...beerData.filter((singleBeer) => singleBeer.type === 'roja')
+			);
+		}
+		if (filterValues.rubia) {
+			dataToShow.push(
+				...beerData.filter((singleBeer) => singleBeer.type === 'rubia')
+			);
+		}
+		if (!filterValues.morena && !filterValues.roja && !filterValues.rubia) {
+			dataToShow.push(...beerData);
+		}
+		if (dataToShow) {
+			setBeersToShow(dataToShow);
+		}
+	}, [filterValues]);
+
 	return (
 		<main>
 			<h1>Cervezas</h1>
 			<div className='card-container'>
-				{beerData.map((singleBeer, index) => (
+				{beersToShow?.map((singleBeer, index) => (
 					<Card
 						key={index}
 						title={singleBeer.title}
@@ -42,7 +70,10 @@ const App = () => {
 					/>
 				))}
 			</div>
-			<ButtonFilter onClickFunction={handleClickFilter} />
+			<ButtonFilter
+				onClickFunction={handleClickFilter}
+				numberFiltersActive={objectFieldsActive(filterValues)}
+			/>
 			<ModalFilter
 				isActiveFilter={isActiveFilter}
 				setIsActiveFilter={setIsActiveFilter}

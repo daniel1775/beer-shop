@@ -3,18 +3,22 @@ import './buttonFilter.scss';
 
 type typeButtonFilter = {
 	onClickFunction: () => void;
+	numberFiltersActive: number;
 };
 
-export default function ButtonFilter({ onClickFunction }: typeButtonFilter) {
+export default function ButtonFilter({
+	onClickFunction,
+	numberFiltersActive,
+}: typeButtonFilter) {
 	return (
 		<div className='button-filter'>
 			<button onClick={onClickFunction}>
 				FILTRAR
 				<img
 					src={FilterIcon}
-					alt=''
-					className=''
+					alt='filter icon'
 				/>
+				{numberFiltersActive > 0 && <span>{numberFiltersActive}</span>}
 			</button>
 		</div>
 	);

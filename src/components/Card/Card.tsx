@@ -1,5 +1,12 @@
-import { typeBeer } from '../../lib/types/beer';
 import './card.scss';
+
+type typeCardProps = {
+	title: string;
+	description: string;
+	price: string;
+	imageUrl: string;
+	type: string;
+};
 
 export default function Card({
 	title,
@@ -7,7 +14,7 @@ export default function Card({
 	price,
 	imageUrl,
 	type,
-}: typeBeer) {
+}: typeCardProps) {
 	return (
 		<div className='card'>
 			<div className='card-wrapper'>

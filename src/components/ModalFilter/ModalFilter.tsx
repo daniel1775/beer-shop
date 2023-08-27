@@ -1,6 +1,8 @@
 import React from 'react';
 import './modalFilter.scss';
 import { typeFilterValues } from '../../lib/types/filter';
+import FilterIcon from '../../assets/svg/filter.svg';
+import { objectFieldsActive } from '../../lib/helpers/objects';
 
 type typeModalFilter = {
 	isActiveFilter: boolean;
@@ -18,6 +20,8 @@ export default function ModalFilter({
 	const handleHideModal = () => {
 		setIsActiveFilter(false);
 	};
+
+	const numberFiltersActive = objectFieldsActive(filterValues);
 
 	const handleChangeOption = (
 		name: string,
@@ -37,6 +41,11 @@ export default function ModalFilter({
 			roja: false,
 		};
 		setFilterValues(defaultFilterValues);
+		setIsActiveFilter(false);
+	};
+
+	const handleFilter = () => {
+		setIsActiveFilter(false);
 	};
 
 	return (
@@ -82,7 +91,17 @@ export default function ModalFilter({
 				</label>
 				<div className='buttons-container'>
 					<button onClick={handleClearOptions}>LIMPIAR</button>
-					<button>FILTRAR</button>
+					<button onClick={handleFilter}>
+						FILTRAR
+						<img
+							src={FilterIcon}
+							alt='filter icon'
+							className=''
+						/>
+						{numberFiltersActive > 0 && (
+							<span>{numberFiltersActive}</span>
+						)}
+					</button>
 				</div>
 			</div>
 		</div>
