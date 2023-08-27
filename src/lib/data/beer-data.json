@@ -46,5 +46,23 @@
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 		"price": "8.000",
 		"type": "roja"
+	},
+	{
+		"title": "Off",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		"price": "52.000",
+		"type": "roja"
+	},
+	{
+		"title": "Club",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		"price": "14.000",
+		"type": "morena"
+	},
+	{
+		"title": "Colombia",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		"price": "8.500",
+		"type": "rubia"
 	}
 ]
