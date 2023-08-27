@@ -1,16 +1,42 @@
+import React from 'react';
 import './modalFilter.scss';
+import { typeFilterValues } from '../../lib/types/filter';
 
 type typeModalFilter = {
 	isActiveFilter: boolean;
 	setIsActiveFilter: (value: boolean) => void;
+	filterValues: typeFilterValues;
+	setFilterValues: (values: typeFilterValues) => void;
 };
 
 export default function ModalFilter({
 	isActiveFilter,
 	setIsActiveFilter,
+	filterValues,
+	setFilterValues,
 }: typeModalFilter) {
 	const handleHideModal = () => {
 		setIsActiveFilter(false);
+	};
+
+	const handleChangeOption = (
+		name: string,
+		e: React.ChangeEvent<HTMLInputElement>
+	) => {
+		const filterValuesUpdated = {
+			...filterValues,
+			[name]: e.target.checked,
+		};
+		setFilterValues(filterValuesUpdated);
+	};
+
+	const handleClearOptions = () => {
+		const defaultFilterValues = {
+			rubia: false,
+			morena: false,
+			roja: false,
+		};
+		setFilterValues(defaultFilterValues);
 	};
 
 	return (
@@ -32,18 +58,30 @@ export default function ModalFilter({
 				<p className='subtitle'>Filtros</p>
 				<label>
 					Rubia
-					<input type='checkbox' />
+					<input
+						type='checkbox'
+						onChange={(e) => handleChangeOption('rubia', e)}
+						checked={filterValues.rubia}
+					/>
 				</label>
 				<label>
 					Morena
-					<input type='checkbox' />
+					<input
+						type='checkbox'
+						onChange={(e) => handleChangeOption('morena', e)}
+						checked={filterValues.morena}
+					/>
 				</label>
 				<label className='last-label'>
 					Roja
-					<input type='checkbox' />
+					<input
+						type='checkbox'
+						onChange={(e) => handleChangeOption('roja', e)}
+						checked={filterValues.roja}
+					/>
 				</label>
 				<div className='buttons-container'>
-					<button>LIMPIAR</button>
+					<button onClick={handleClearOptions}>LIMPIAR</button>
 					<button>FILTRAR</button>
 				</div>
 			</div>

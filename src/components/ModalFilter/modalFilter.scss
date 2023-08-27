@@ -4,7 +4,7 @@
     left: 0;
     bottom: 0;
     transition: all .4s ease;
-    background-color: aquamarine;
+    background-color: white;
     z-index: 50;
     .wrapper {
         padding: 10px 20px 30px 20px;
@@ -12,7 +12,7 @@
     label {
         display: flex;
         justify-content: space-between;
-        padding: 10px 0;
+        padding: 15px 0;
         border-top: 1px solid rgb(173, 172, 172);
     }
     .last-label {
@@ -61,12 +61,13 @@
     .buttons-container {
         display: flex;
         justify-content: center;
-        gap: 4px;
+        gap: 10px;
         margin-top: 20px;
         button {
             width: 45%;
             padding: 8px 0;
             cursor: pointer;
         }
+
     }
 }
