@@ -12,5 +12,25 @@ main {
             margin: 0 auto;
         }
     }
-    
+    .dark-screen {
+        pointer-events: none;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        background-color: black;
+        transition: all .4s ease;
+        &-active {
+            opacity: 0.6;
+        }
+        &-hide {
+            opacity: 0;
+        }
+    }
+}
+
+.no-scroll {
+    overflow: hidden;
 }

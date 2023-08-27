@@ -1,11 +1,14 @@
-import React from 'react';
 import FilterIcon from '../../assets/svg/filter.svg';
 import './buttonFilter.scss';
 
-export default function ButtonFilter() {
+type typeButtonFilter = {
+	onClickFunction: () => void;
+};
+
+export default function ButtonFilter({ onClickFunction }: typeButtonFilter) {
 	return (
 		<div className='button-filter'>
-			<button>
+			<button onClick={onClickFunction}>
 				FILTRAR
 				<img
 					src={FilterIcon}
