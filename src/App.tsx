@@ -38,6 +38,7 @@ const App = () => {
 						description={singleBeer.description}
 						price={singleBeer.price}
 						imageUrl={budLightImage}
+						type={singleBeer.type}
 					/>
 				))}
 			</div>

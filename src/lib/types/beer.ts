@@ -3,4 +3,5 @@ export type typeBeer = {
 	description: string;
 	price: string;
 	imageUrl: string;
+	type: 'roja' | 'rubia' | 'morena';
 };

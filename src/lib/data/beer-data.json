@@ -2,41 +2,49 @@
 	{
 		"title": "Cassets Milk Stou",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-		"price": "20.000"
+		"price": "20.000",
+		"type": "roja"
 	},
 	{
 		"title": "Camba",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-		"price": "89.000"
+		"price": "89.000",
+		"type": "morena"
 	},
 	{
 		"title": "Vatus",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-		"price": "47.000"
+		"price": "47.000",
+		"type": "roja"
 	},
 	{
 		"title": "Artisian",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-		"price": "50.000"
+		"price": "50.000",
+		"type": "roja"
 	},
 	{
 		"title": "Abbey",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-		"price": "22.000"
+		"price": "22.000",
+		"type": "rubia"
 	},
 	{
 		"title": "Praire",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-		"price": "52.000"
+		"price": "52.000",
+		"type": "rubia"
 	},
 	{
 		"title": "Andina",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-		"price": "3.000"
+		"price": "3.000",
+		"type": "rubia"
 	},
 	{
 		"title": "Poker",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-		"price": "8.000"
+		"price": "8.000",
+		"type": "roja"
 	}
 ]

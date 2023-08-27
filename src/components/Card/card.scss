@@ -18,6 +18,22 @@
         color: rgb(151 145 145);
         line-height: 20px;
     }
+    &-type {
+        font-size: calc(1rem - 4px);
+        border-radius: 6px;
+        padding: 2px 5px;
+        color: white;
+        width: fit-content;
+    }
+    &-type-roja {
+        background-color: rgb(182, 56, 56);
+    }
+    &-type-rubia {
+        background-color: rgb(198, 198, 49);
+    }
+    &-type-morena {
+        background-color: rgb(219, 94, 17);
+    }
     &-price {
         font-weight: 800;
     }
